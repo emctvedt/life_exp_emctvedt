@@ -1,0 +1,9 @@
+---
+title: "life_exp_analysis.qmd"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+```
