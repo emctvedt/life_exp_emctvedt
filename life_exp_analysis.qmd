@@ -7,3 +7,22 @@ editor: visual
 ```{r}
 library(tidyverse)
 ```
+
+```{r}
+gapminder::gapminder_unfiltered
+
+```
+
+```{r}
+  gapminder::gapminder_unfiltered |> 
+  group_by(year) |>
+  filter(lifeExp == max(lifeExp)) |>
+  ungroup() |>
+  select(year, country, lifeExp) |>
+  arrange(year) ->
+  sumdat
+```
+
+```{r}
+view (sumdat)
+```
